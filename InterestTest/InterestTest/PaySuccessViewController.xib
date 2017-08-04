@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F2315" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaySuccessViewController">
+            <connections>
+                <outlet property="lookBtn" destination="h30-9e-qzM" id="QpZ-dc-tA3"/>
+                <outlet property="orderNum" destination="5Rn-cc-7SW" id="zcN-eU-xsH"/>
+                <outlet property="payMoney" destination="I5L-uS-ugl" id="6yQ-YG-XjA"/>
+                <outlet property="successLab" destination="aGx-TU-efB" id="7tR-bc-3kH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h30-9e-qzM">
+                    <rect key="frame" x="253" y="538" width="189" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="189" id="p7r-xY-vl5"/>
+                        <constraint firstAttribute="height" constant="45" id="vTA-GU-KUq"/>
+                    </constraints>
+                    <state key="normal" title="添加地址"/>
+                    <connections>
+                        <action selector="toLook:" destination="-1" eventType="touchUpInside" id="04J-eQ-EDb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rn-cc-7SW">
+                    <rect key="frame" x="325" y="477" width="44" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" priority="213" constant="213" id="FCY-FP-wGT"/>
+                        <constraint firstAttribute="height" constant="21" id="Rzm-xU-XtW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5L-uS-ugl">
+                    <rect key="frame" x="325" y="436" width="44" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Mo8-R4-HZK"/>
+                        <constraint firstAttribute="width" priority="62" constant="62" id="XlN-MJ-V9K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGx-TU-efB">
+                    <rect key="frame" x="298" y="383" width="98" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="98" id="8zp-ef-fSb"/>
+                        <constraint firstAttribute="height" constant="21" id="Z6D-5W-Y6a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success" translatesAutoresizingMaskIntoConstraints="NO" id="uNx-k1-CmB">
+                    <rect key="frame" x="279" y="191" width="136" height="149"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="149" id="gLD-sh-cFC"/>
+                        <constraint firstAttribute="width" constant="136" id="sFH-3K-Sc1"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="h30-9e-qzM" secondAttribute="bottom" constant="185" id="4QH-VZ-NbB"/>
+                <constraint firstItem="I5L-uS-ugl" firstAttribute="top" secondItem="aGx-TU-efB" secondAttribute="bottom" constant="32" id="6UY-em-f7V"/>
+                <constraint firstItem="I5L-uS-ugl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="C1W-sV-iiD"/>
+                <constraint firstItem="aGx-TU-efB" firstAttribute="top" secondItem="uNx-k1-CmB" secondAttribute="bottom" constant="43" id="FOA-kA-msH"/>
+                <constraint firstItem="h30-9e-qzM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nvb-Dt-ay2"/>
+                <constraint firstItem="5Rn-cc-7SW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QuZ-Ve-oAZ"/>
+                <constraint firstItem="h30-9e-qzM" firstAttribute="top" secondItem="5Rn-cc-7SW" secondAttribute="bottom" constant="40" id="T1G-Jd-U60"/>
+                <constraint firstItem="uNx-k1-CmB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gin-9e-SbE"/>
+                <constraint firstItem="aGx-TU-efB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ldC-PJ-AFL"/>
+                <constraint firstItem="5Rn-cc-7SW" firstAttribute="top" secondItem="I5L-uS-ugl" secondAttribute="bottom" constant="20" id="wfr-aj-qt4"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad-2/3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="success" width="136" height="149"/>
+    </resources>
+</document>
