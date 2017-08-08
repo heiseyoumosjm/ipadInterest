@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InterestTest/UserLIstViewController.m"
-            timestampString = "523900639.612347"
+            timestampString = "523926545.532674"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "795"
-            endingLineNumber = "795"
+            startingLineNumber = "865"
+            endingLineNumber = "865"
             landmarkName = "-cancal"
             landmarkType = "7">
          </BreakpointContent>

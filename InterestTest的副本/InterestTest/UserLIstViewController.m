@@ -570,9 +570,15 @@
     UITextField *nametifd=[[UITextField alloc]initWithFrame:CGRectMake(90, 30+64, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
     nametifd.textColor=UIColorFromRGB(0x333333);
     nametifd.font=[UIFont systemFontOfSize:18.f];
-    nametifd.placeholder=@"请输入姓名（必填）";
+    nametifd.placeholder=@"请输入姓名";
     nametifd.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:nametifd];
+    
+    UILabel *line=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line.backgroundColor=UIColorFromRGB(0x666666);
+     [_editview addSubview:line];
+    
+    
     
     UILabel *phonelab1=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48, 10, 48)];
     phonelab1.text=@"*";
@@ -592,6 +598,10 @@
     phonelab3.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:phonelab3];
     
+    UILabel *line1=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line1.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line1];
+    
     UILabel *lplab1=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48, 10, 48)];
     lplab1.text=@"*";
     lplab1.textColor=colorHead;
@@ -603,13 +613,17 @@
     lplab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:lplab2];
     
-    UIButton *lp3=[[UIButton alloc]initWithFrame:CGRectMake(40, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
+    UIButton *lp3=[[UIButton alloc]initWithFrame:CGRectMake(90, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
     lp3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     lp3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    lp3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [lp3 setTitle:@"请选择楼盘" forState:UIControlStateNormal];
-    [lp3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    lp3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [lp3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [lp3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:lp3];
+    
+    UILabel *line2=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line2.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line2];
     
     UILabel *hxlab1=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48, 10, 48)];
     hxlab1.text=@"*";
@@ -622,13 +636,17 @@
     hxlab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:hxlab2];
     
-    UIButton *hx3=[[UIButton alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
+    UIButton *hx3=[[UIButton alloc]initWithFrame:CGRectMake(90, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
     hx3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     hx3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    hx3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [hx3 setTitle:@"请选择户型" forState:UIControlStateNormal];
-    [hx3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    hx3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [hx3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [hx3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:hx3];
+    
+    UILabel *line3=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line3.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line3];
     
     UILabel *likestyle=[[UILabel alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48+48, 160, 48)];
     likestyle.text=@"喜欢的装修风格:";
@@ -636,14 +654,17 @@
     likestyle.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:likestyle];
     
-    UIButton *likestylebtn=[[UIButton alloc]initWithFrame:CGRectMake(200,  30+64+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-200, 48)];
+    UIButton *likestylebtn=[[UIButton alloc]initWithFrame:CGRectMake(200,  30+64+48+48+48+48, (0.68*SCREEN_WIDTH-90)-200, 48)];
     likestylebtn.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     likestylebtn.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    likestylebtn.titleLabel.textAlignment=NSTextAlignmentRight;
-    [likestylebtn setTitle:@"请选择" forState:UIControlStateNormal];
-    [likestylebtn setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    likestylebtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [likestylebtn setTitle:@"(选)" forState:UIControlStateNormal];
+    [likestylebtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:likestylebtn];
     
+    UILabel *line4=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-30, 1)];
+    line4.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line4];
 //    UITextField *likestyletifd=[[UITextField alloc]initWithFrame:CGRectMake(160, 30+64+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-110, 48)];
 //    likestyletifd.textColor=UIColorFromRGB(0x333333);
 //    likestyletifd.font=[UIFont systemFontOfSize:18.f];
@@ -657,13 +678,17 @@
     fslab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:fslab2];
     
-    UIButton *fs3=[[UIButton alloc]initWithFrame:CGRectMake(140, 30+64+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-140, 48)];
+    UIButton *fs3=[[UIButton alloc]initWithFrame:CGRectMake(140, 30+64+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-140, 48)];
     fs3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     fs3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    fs3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [fs3 setTitle:@"请选择" forState:UIControlStateNormal];
-    [fs3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    fs3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [fs3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [fs3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:fs3];
+    
+    UILabel *line5=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-30, 1)];
+    line5.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line5];
     
     UILabel *family=[[UILabel alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48+48+48+48, 100, 48)];
     family.text=@"家庭成员:";
@@ -671,12 +696,17 @@
     family.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:family];
     
-    UITextField *familytifd=[[UITextField alloc]initWithFrame:CGRectMake(110, 30+64+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-110, 48)];
+    UITextField *familytifd=[[UITextField alloc]initWithFrame:CGRectMake(140, 30+64+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-140, 48)];
     familytifd.textColor=UIColorFromRGB(0x333333);
     familytifd.font=[UIFont systemFontOfSize:18.f];
     familytifd.placeholder=@"请输入家庭成员";
     familytifd.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:familytifd];
+    
+    UILabel *line6=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-30, 1)];
+    line6.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line6];
+    
     
     UILabel *khlab2=[[UILabel alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48+48+48+48+48, 80, 48)];
     khlab2.text=@"客户来源:";
@@ -684,13 +714,17 @@
     khlab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:khlab2];
     
-    UIButton *kh3=[[UIButton alloc]initWithFrame:CGRectMake(120, 30+64+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
+    UIButton *kh3=[[UIButton alloc]initWithFrame:CGRectMake(120, 30+64+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-120, 48)];
     kh3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     kh3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    kh3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [kh3 setTitle:@"请选择" forState:UIControlStateNormal];
-    [kh3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    kh3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [kh3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [kh3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:kh3];
+    
+    UILabel *line7=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-30, 1)];
+    line7.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line7];
     
     
     UILabel *remark=[[UILabel alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48+48+48+48+48+48, 100, 48)];
@@ -699,12 +733,24 @@
     remark.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:remark];
     
-    UITextField *remarktifd=[[UITextField alloc]initWithFrame:CGRectMake(110, 30+64+48+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-60-110), 48)];
+    UITextField *remarktifd=[[UITextField alloc]initWithFrame:CGRectMake(140, 30+64+48+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-140, 48)];
     remarktifd.textColor=UIColorFromRGB(0x333333);
     remarktifd.font=[UIFont systemFontOfSize:18.f];
     remarktifd.placeholder=@"请输入备注";
-    remarktifd.textAlignment=NSTextAlignmentLeft;
+    remarktifd.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:remarktifd];
+    
+    UILabel *line8=[[UILabel alloc]initWithFrame:CGRectMake(30, 30+64+48+48+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-30, 1)];
+    line8.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line8];
+    
+    UIButton *add=[[UIButton alloc]initWithFrame:CGRectMake(40, 30+64+48+48+48+48+48+48+48+48+48+48, (0.68*SCREEN_WIDTH-90)-120, 48)];
+    add.titleLabel.textColor=UIColorFromRGB(0xcccccc);
+    add.titleLabel.font=[UIFont systemFontOfSize:18.f];
+    [add setImage:[UIImage imageNamed:@"add"] forState:UIControlStateNormal];
+    [add setTitle:@"新增户型" forState:UIControlStateNormal];
+    [add setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    [_editview addSubview:add];
     
     
     
@@ -732,11 +778,20 @@
     UIButton *sexlab3=[[UIButton alloc]initWithFrame:CGRectMake(80+(0.68*SCREEN_WIDTH-90)/2, 30+64, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
     sexlab3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     sexlab3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    sexlab3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [sexlab3 setTitle:@"请选择性别" forState:UIControlStateNormal];
-    [sexlab3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    sexlab3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [sexlab3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [sexlab3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:sexlab3];
     
+    UILabel *line9=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line9.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line9];
+    
+    
+    UILabel *arealab1=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48, 10, 48)];
+    arealab1.text=@"*";
+    arealab1.textColor=colorHead;
+    [_editview addSubview:arealab1];
     
     UILabel *arealab2=[[UILabel alloc]initWithFrame:CGRectMake(40+(0.68*SCREEN_WIDTH-90)/2,30+64+48, 50, 48)];
     arealab2.text=@"面积:";
@@ -744,39 +799,62 @@
     arealab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:arealab2];
     
-    UITextField *areatifd=[[UITextField alloc]initWithFrame:CGRectMake(80+(0.68*SCREEN_WIDTH-90)/2, 30+64+48, (0.68*SCREEN_WIDTH-90)/2-110, 48)];
+    UITextField *areatifd=[[UITextField alloc]initWithFrame:CGRectMake(90+(0.68*SCREEN_WIDTH-90)/2, 30+64+48, (0.68*SCREEN_WIDTH-90)/2-90-30, 48)];
     areatifd.textColor=UIColorFromRGB(0x333333);
     areatifd.font=[UIFont systemFontOfSize:18.f];
     areatifd.placeholder=@"请输入面积";
     areatifd.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:areatifd];
     
-    UILabel *hxhlab2=[[UILabel alloc]initWithFrame:CGRectMake(40+(0.68*SCREEN_WIDTH-90)/2,30+64+48+48, 50, 48)];
+    UILabel *pflab1=[[UILabel alloc]initWithFrame:CGRectMake(90+(0.68*SCREEN_WIDTH-90)/2+(0.68*SCREEN_WIDTH-90)/2-90-30, 30+64+48, 30, 48)];
+    pflab1.text=@"㎡";
+    pflab1.textColor=UIColorFromRGB(0x333333);
+    [_editview addSubview:pflab1];
+    
+    UILabel *line10=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line10.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line10];
+    
+    
+    UILabel *hxhlab1=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48, 10, 48)];
+    hxhlab1.text=@"*";
+    hxhlab1.textColor=colorHead;
+    [_editview addSubview:hxhlab1];
+    
+    UILabel *hxhlab2=[[UILabel alloc]initWithFrame:CGRectMake(40+(0.68*SCREEN_WIDTH-90)/2,30+64+48+48, 60, 48)];
     hxhlab2.text=@"户型号:";
     hxhlab2.font=[UIFont systemFontOfSize:18.f];
     hxhlab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:hxhlab2];
     
-    UITextField *hxhtifd=[[UITextField alloc]initWithFrame:CGRectMake(80+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-110, 48)];
+    UITextField *hxhtifd=[[UITextField alloc]initWithFrame:CGRectMake(120+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48, (0.68*SCREEN_WIDTH-90)/2-120, 48)];
     hxhtifd.textColor=UIColorFromRGB(0x333333);
     hxhtifd.font=[UIFont systemFontOfSize:18.f];
-    hxhtifd.placeholder=@"请输入户型号";
+    hxhtifd.placeholder=@"(选)";
     hxhtifd.textAlignment=NSTextAlignmentRight;
     [_editview addSubview:hxhtifd];
     
-    UILabel *stylehlab2=[[UILabel alloc]initWithFrame:CGRectMake(40+(0.68*SCREEN_WIDTH-90)/2,30+64+48+48+48, 50, 48)];
+    UILabel *line11=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line11.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line11];
+    
+    UILabel *stylehlab2=[[UILabel alloc]initWithFrame:CGRectMake(40+(0.68*SCREEN_WIDTH-90)/2,30+64+48+48+48, 120, 48)];
     stylehlab2.text=@"拟装修风格:";
     stylehlab2.font=[UIFont systemFontOfSize:18.f];
     stylehlab2.textColor=UIColorFromRGB(0x333333);
     [_editview addSubview:stylehlab2];
     
-    UIButton *stylelab3=[[UIButton alloc]initWithFrame:CGRectMake(80+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-90, 48)];
+    UIButton *stylelab3=[[UIButton alloc]initWithFrame:CGRectMake(160+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48+48, (0.68*SCREEN_WIDTH-90)/2-160, 48)];
     stylelab3.titleLabel.textColor=UIColorFromRGB(0xcccccc);
     stylelab3.titleLabel.font=[UIFont systemFontOfSize:18.f];
-    stylelab3.titleLabel.textAlignment=NSTextAlignmentRight;
-    [stylelab3 setTitle:@"请选择" forState:UIControlStateNormal];
-    [stylelab3 setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
+    stylelab3.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    [stylelab3 setTitle:@"(选)" forState:UIControlStateNormal];
+    [stylelab3 setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [_editview addSubview:stylelab3];
+    
+    UILabel *line12=[[UILabel alloc]initWithFrame:CGRectMake(30+(0.68*SCREEN_WIDTH-90)/2, 30+64+48+48+48+48, (0.68*SCREEN_WIDTH-90)/2-30, 1)];
+    line12.backgroundColor=UIColorFromRGB(0x666666);
+    [_editview addSubview:line12];
     
     
     
