@@ -12,5 +12,7 @@
 @interface ViewController : UIViewController <SKSTableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet SKSTableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *img1;
+@property (weak, nonatomic) IBOutlet UIImageView *img2;
 
 @end

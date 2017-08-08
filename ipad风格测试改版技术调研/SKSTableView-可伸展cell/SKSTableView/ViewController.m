@@ -44,6 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _img1.hidden=NO;
 
     self.tableView.SKSTableViewDelegate = self;
 }
@@ -104,5 +105,52 @@
     
     return cell;
 }
-
+#pragma mark - cell点击事件
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //消除cell选择痕迹
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    switch (indexPath.section) {
+        case 0:
+        {
+            NSLog(@"%ld---%ld",(long)indexPath.section,(long)indexPath.row);
+        }
+            break;
+        case 1:
+        {
+            NSLog(@"%ld---%ld",(long)indexPath.section,(long)indexPath.row);
+            if (indexPath.row==1) {
+                _img1.hidden=YES;
+            }else{
+                _img1.hidden=NO;
+            }
+        }
+            break;
+        case 2:
+        {
+            NSLog(@"%ld---%ld",(long)indexPath.section,(long)indexPath.row);
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+//    if(indexPath.section==0)
+//    {
+//        //        if(indexPath.row==0)
+//        //        {
+//        _img1.hidden=NO;
+//        //        }
+//    }
+//
+//    if(indexPath.section==1)
+//    {
+////        if(indexPath.row==0)
+////        {
+//        _img1.hidden=YES;;
+////        }
+//    }
+    
+}
 @end

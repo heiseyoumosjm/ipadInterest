@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F2315" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoomColorViewController">
+            <connections>
+                <outlet property="backImg" destination="Em8-Cw-T7d" id="EDl-IG-Weg"/>
+                <outlet property="colorbtn" destination="pXU-qj-k2f" id="Khl-xd-mqZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Em8-Cw-T7d">
+                    <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXU-qj-k2f">
+                    <rect key="frame" x="609" y="683" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="JzW-tc-fDj"/>
+                        <constraint firstAttribute="height" constant="40" id="bEq-Qe-yh7"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="sehuan.png"/>
+                    <connections>
+                        <action selector="colorChangeBtn:" destination="-1" eventType="touchUpInside" id="lJp-kq-eu1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pXU-qj-k2f" secondAttribute="bottom" constant="45" id="07i-eP-4hJ"/>
+                <constraint firstItem="Em8-Cw-T7d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8El-O4-yLV"/>
+                <constraint firstItem="Em8-Cw-T7d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lwe-su-C5N"/>
+                <constraint firstAttribute="bottom" secondItem="Em8-Cw-T7d" secondAttribute="bottom" id="Udi-fF-ACK"/>
+                <constraint firstAttribute="trailing" secondItem="pXU-qj-k2f" secondAttribute="trailing" constant="45" id="Yoi-gb-t2Y"/>
+                <constraint firstAttribute="trailing" secondItem="Em8-Cw-T7d" secondAttribute="trailing" id="xyy-cC-F1W"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad-2/3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg.png" width="5184" height="2666"/>
+        <image name="sehuan.png" width="76" height="76"/>
+    </resources>
+</document>
